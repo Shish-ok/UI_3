@@ -1,5 +1,3 @@
-import {Key} from "readline";
-
 class MyNode<K> {
     readonly _key: K
     private _left: MyNode<K> | null
@@ -136,13 +134,13 @@ export class MyTree<K> {
             let leftest = tmpNode.right.left
             let leftestParent = tmpNode.right
 
-            while (leftest.left !== null) {
+            while (leftest.left != null) {
                 leftestParent = leftest
                 leftest = leftest.left
             }
 
-            leftestParent.left = leftestParent.right
-            let left = tmpNode.left
+            leftestParent.left = leftest.right
+            this._root.left = tmpNode.left
             leftest.right = tmpNode.right
 
             if (!parent) { this._root = leftest }
