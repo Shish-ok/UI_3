@@ -5,7 +5,7 @@ const tree = new MyTree<number>()
 console.log("Tree created!")
 
 while (true) {
-    let num = readlineSync.question("\nEnter (1 - 'add', 2 - 'search', 3 - 'display', 4 - 'delete', 5 - exit): ")
+    let num = readlineSync.question("\nEnter command number (1 - 'add', 2 - 'search', 3 - 'display', 4 - 'delete', 5 - exit): ")
     let command = Number(num)
 
     if (command === 1) {
